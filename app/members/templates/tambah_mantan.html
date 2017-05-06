@@ -1,0 +1,42 @@
+{% extends "theme.html" %}
+
+{% block title %}
+	{{ super() }}
+    Tambah Mantan
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+    <div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Halaman Dashboard</h2>
+    </div>
+	</div>
+	<div class="row">
+	    <div class="col-lg-12">
+	        <div class="panel panel-info">
+	            <div class="panel-heading">
+
+	            </div>
+	            <!-- /.panel-heading -->
+	            <div class="panel-body">
+
+                    <div class="page-header">
+                        <h2>Tambahkan Mantanmu</h2>
+                    </div>
+
+                    <form action="{{url_for('members.tambah_mantan')}}" method="post">
+                        {{ form.csrf_token }}
+                        {{ form.nama_mantan(placeholder="Nama Mantan") }}
+                        {{ form.alasan_putus(placeholder="Alasan Putus") }}
+                        <button class="btn btn-sm btn-success" type="submit">Tambah Mantan</button>
+                    </form>
+
+                </div>
+	            <!-- /.panel-body -->
+	        </div>
+	        <!-- /.panel -->
+	    </div>
+	    <!-- /.col-lg-12-->
+	</div>
+{% endblock %}

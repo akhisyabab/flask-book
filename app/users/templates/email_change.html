@@ -1,0 +1,24 @@
+{% extends "login_layout.html" %}
+{% from "_form_macros.html" import render_field %}
+
+{% block title %}
+    Change Email
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <section id="content">
+    <div class="form">
+      <form action="{{ url_for('users.user_email_change') }}" method="POST">
+      {{ form.csrf_token }}
+        <dl>
+          {{ render_field(form.email, placeholder="Enter New Email Address") }}
+        </dl>
+        <button class="btn btn-sm btn-success" type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

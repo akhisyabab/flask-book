@@ -1,0 +1,38 @@
+{% extends "theme.html" %}
+{% block body %}
+
+<div class="user-profile">
+  <div class="page-header">
+    <h2>ID : {{ mantan.Mantan.id }}</h2>
+  </div>
+
+  <div class="row">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Nama Mantan</div>
+        <div class="panel-body">{{ mantan.Mantan.nama_mantan }}</div>
+
+      </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Alasan Putus</div>
+      <div class="panel-body">{{ mantan.Mantan.alasan_putus }}</div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Public or Private</div>
+      {% if mantan.Mantan.is_public %}
+        <div class="panel-body">Public</div>
+      {% else %}
+        <div class="panel-body">Private</div>
+      {% endif %}
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">User</div>
+      <div class="panel-body">{{ mantan.User.email }}</div>
+    </div>
+
+  </div>
+</div>`
+
+{% endblock %}

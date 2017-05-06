@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>favoritePlayer</title>
+  </head>
+  <body>
+      <h1>Hello. I'am Flask Developer</h1>
+      {% for list in users %}
+          <tr class="odd gradeX">
+              <td>{{ list.email }}</td>
+            
+          </tr>
+      {% endfor %}
+  </body>
+</html>

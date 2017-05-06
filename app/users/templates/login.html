@@ -1,0 +1,56 @@
+{% extends "login_layout.html" %}
+{% from "_form_macros.html" import render_field %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  {% for error_message in get_flashed_messages(category_filter=["error"]) %}
+    <div class="alert alert-danger alert-dismissible text-center">{{ error_message }}</div>
+  {% endfor %}
+
+  {% for success_message in get_flashed_messages(category_filter=["success"]) %}
+    <div class="alert alert-success alert-dismissible text-center">{{ success_message }}</div>
+  {% endfor %}
+
+  {% for info_message in get_flashed_messages(category_filter=["info"]) %}
+    <div class="alert alert-info alert-dismissible text-center">{{ info_message }}</div>
+  {% endfor %}
+
+  <section id="content">
+    <form action="{{ url_for('users.login') }}" method="post">
+      <h1>Login Form</h1>
+      {{ form.csrf_token }}
+      {{ render_field(form.email, placeholder="Email address") }}
+      {{ render_field(form.password, placeholder="Password") }}
+      <div>
+        <input type="submit" />
+        <a href="/reset">Lost your password?</a>
+        <a href="/register">Register</a>
+      </div>
+    </form><!-- form -->
+  </section><!-- content -->
+</div><!-- container -->
+
+
+
+
+
+
+
+
+<!--        <form action="http://localhost:5000/login" method="post">
+            <a href="/">
+                <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
+            </a>
+
+            {{ form.csrf_token }}
+            <input type="text" placeholder="Username" name="username"/>
+            <input type="password" placeholder="Password" name="password"/>
+            <input type="submit" value="masuk">
+        </form>
+-->
+    </div>
+{% endblock %}
