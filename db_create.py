@@ -8,7 +8,7 @@ db.create_all()
 # create the database and the database table
 
 #admin
-admin_user = User('akhi@gmail.com', '123456', role='admin')
+admin_user = User('akhi@gmail.com', plaintext_password='123456', role='admin')
 db.session.add(admin_user)
 
 #insert nama mantan
