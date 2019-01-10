@@ -8,7 +8,7 @@
 
     <div class="row">
     <div class="col-lg-12">
-        <h2 class="page-header">Halaman Dashboard</h2>
+        <h2 class="page-header">Dashboard Page</h2>
     </div>
 	</div>
 	<div class="row">
@@ -24,19 +24,19 @@
 							<thead>
 								<tr>
 									<th>Nama</th>
-									<th>Alasan Putus</th>
+									<th>Reason </th>
                                     <th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
-							{% for list in mantan %}
+							{% for list in book %}
 								<tr class="odd gradeX">
-									<td><a href="{{ url_for('members.mantan_details', mantan_id=list.id) }}">{{ list.nama_mantan }}</a></td>
-									<td>{{ list.alasan_putus }}</td>
+									<td><a href="{{ url_for('members.book_details', book_id=list.id) }}">{{ list.book_name }}</a></td>
+									<td>{{ list.reason }}</td>
                                     <td>
-                                        <a href="{{ url_for('members.mantan_delete', mantan_id=list.id) }}">Delete</a>
+                                        <a href="{{ url_for('members.book_delete', book_id=list.id) }}">Delete</a>
                                         |
-                                        <a href="{{ url_for('members.mantan_edit', mantan_id=list.id) }}">Edit</a>
+                                        <a href="{{ url_for('members.book_edit', book_id=list.id) }}">Edit</a>
                                     </td>
 								</tr>
 							{% endfor %}

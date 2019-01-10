@@ -3,24 +3,24 @@
 
 <div class="user-profile">
   <div class="page-header">
-    <h2>ID : {{ mantan.Mantan.id }}</h2>
+    <h2>ID : {{ book.Book.id }}</h2>
   </div>
 
   <div class="row">
       <div class="panel panel-primary">
-        <div class="panel-heading">Nama Mantan</div>
-        <div class="panel-body">{{ mantan.Mantan.nama_mantan }}</div>
+        <div class="panel-heading">Book Name</div>
+        <div class="panel-body">{{ book.Book.book_name }}</div>
 
       </div>
 
     <div class="panel panel-primary">
-      <div class="panel-heading">Alasan Putus</div>
-      <div class="panel-body">{{ mantan.Mantan.alasan_putus }}</div>
+      <div class="panel-heading">Reason</div>
+      <div class="panel-body">{{ book.Book.reason }}</div>
     </div>
 
     <div class="panel panel-primary">
       <div class="panel-heading">Public or Private</div>
-      {% if mantan.Mantan.is_public %}
+      {% if book.Book.is_public %}
         <div class="panel-body">Public</div>
       {% else %}
         <div class="panel-body">Private</div>
@@ -29,7 +29,7 @@
 
     <div class="panel panel-primary">
       <div class="panel-heading">User</div>
-      <div class="panel-body">{{ mantan.User.email }}</div>
+      <div class="panel-body">{{ book.User.email }}</div>
     </div>
 
   </div>

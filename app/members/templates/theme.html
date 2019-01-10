@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mantanku App - {% block title %}{% endblock %}</title>
+    <title>Bookku App - {% block title %}{% endblock %}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ url_for('static',filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -284,13 +284,13 @@
                         </li>
                         {% if current_user.is_authenticated %}
                         <li>
-                            <a href="{{ url_for('members.tambah_mantan') }}"><i class="fa fa-plus fa-fw"></i> Tambah Mantan</a>
+                            <a href="{{ url_for('members.add_book') }}"><i class="fa fa-plus fa-fw"></i> Add Book</a>
                         </li>
                             {% if current_user.role == "admin" %}
                             <li><a href="{{ url_for('users.admin_view_users') }}"><i class="fa fa-eye fa-fw"></i> View Users (Admin)</a></li>
                             {% endif %}
                         {% else %}
-                        <li><a href="{{ url_for('users.login') }}">Tambah Mantan</a></li>
+                        <li><a href="{{ url_for('users.login') }}">Add Book</a></li>
                       {% endif %}
 
                     </ul>

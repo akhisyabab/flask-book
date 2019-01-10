@@ -3,17 +3,17 @@ from sqlalchemy.ext.hybrid import hybrid_method, hybrid_property
 from datetime import datetime
 from . import app
 
-class Mantan(db.Model):
-    __tablename__ = "mantan"
+class Book(db.Model):
+    __tablename__ = "books"
     id = db.Column(db.Integer, primary_key=True)
-    nama_mantan = db.Column(db.String, nullable=False)
-    alasan_putus = db.Column(db.String, nullable=False)
+    book_name = db.Column(db.String, nullable=False)
+    reason = db.Column(db.String, nullable=False)
     is_public = db.Column(db.Boolean, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
-    def __init__(self, nama, alasan, user_id, is_public):
-        self.nama_mantan = nama
-        self.alasan_putus = alasan
+    def __init__(self, name, reason, user_id, is_public):
+        self.book_name = name
+        self.reason = reason
         self.is_public = is_public
         self.user_id = user_id
 
@@ -36,7 +36,7 @@ class User(db.Model):
     last_logged_in = db.Column(db.DateTime, nullable=True)
     current_logged_in = db.Column(db.DateTime, nullable=True)
     role = db.Column(db.String, default='user')
-    mantan = db.relationship('Mantan', backref='user', lazy='dynamic')
+    book = db.relationship('Book', backref='user', lazy='dynamic')
 
     def __init__(self, email, plaintext_password, email_confirmation_sent_on=None, role='users'):
         self.email = email

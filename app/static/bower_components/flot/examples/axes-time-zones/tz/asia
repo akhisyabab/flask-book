@@ -763,8 +763,8 @@ Zone	Asia/Kolkata	5:53:28 -	LMT	1880	# Kolkata
 # From Gwillim Law (2001-05-28), overriding Shanks & Pottenger:
 # <http://www.sumatera-inc.com/go_to_invest/about_indonesia.asp#standtime>
 # says that Indonesia's time zones changed on 1988-01-01.  Looking at some
-# time zone maps, I think that must refer to Western Borneo (Kalimantan Barat
-# and Kalimantan Tengah) switching from UTC+8 to UTC+7.
+# time zone maps, I think that must refer to Western Borneo (Kalibook Barat
+# and Kalibook Tengah) switching from UTC+8 to UTC+7.
 #
 # From Paul Eggert (2007-03-10):
 # Here is another correction to Shanks & Pottenger.

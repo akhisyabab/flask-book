@@ -12,7 +12,7 @@ DEBUG = True
 
 
 # SQLAlchemy
-SQLALCHEMY_DATABASE_URI = 'postgres://postgres:password@localhost/flask_mantan_public'
+SQLALCHEMY_DATABASE_URI = 'postgres://postgres:password@localhost/flask_favorite_book'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 # Bcrypt algorithm hashing rounds

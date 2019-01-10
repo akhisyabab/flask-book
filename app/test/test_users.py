@@ -1,6 +1,3 @@
-# project/test_users.py
-
-
 import unittest
 import os
 

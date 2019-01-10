@@ -2,14 +2,14 @@
 
 {% block title %}
 	{{ super() }}
-    Tambah Mantan
+    Add Book
 {% endblock %}
 
 {% block body %}
     {{ super() }}
     <div class="row">
     <div class="col-lg-12">
-        <h2 class="page-header">Halaman Dashboard</h2>
+        <h2 class="page-header">Add Book Page</h2>
     </div>
 	</div>
 	<div class="row">
@@ -22,14 +22,14 @@
 	            <div class="panel-body">
 
                     <div class="page-header">
-                        <h2>Edit</h2>
+                        <h2>Add Book</h2>
                     </div>
 
-                    <form action="{{url_for('members.mantan_edit', mantan_id=mantan.Mantan.id)}}" method="post">
+                    <form action="{{url_for('members.add_book')}}" method="post">
                         {{ form.csrf_token }}
-                        {{ form.nama_mantan(value = mantan.Mantan.nama_mantan) }}
-                        {{ form.alasan_putus(value=mantan.Mantan.alasan_putus) }}
-                        <button class="btn btn-sm btn-success" type="submit">Edit Mantan</button>
+                        {{ form.book_name(placeholder="Book Name") }}
+                        {{ form.reason(placeholder="Reason ") }}
+                        <button class="btn btn-sm btn-success" type="submit">Add Book</button>
                     </form>
 
                 </div>

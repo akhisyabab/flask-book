@@ -1,8 +1,16 @@
-# Mantan App
-CRUD flask app with postgres
+# CRUD Book App
+This repo is about flask microframework with postgresql database.
 
-1. git clone https://github.com/akhisyabab/flask-mantan.git
-2. cd flask-mantan
+## Features
+* Register with email confirmation.
+* Login.
+* Create, Read, Update, Delete Favorite Book.
+
+
+
+## How to run:
+1. git clone https://github.com/akhisyabab/flask-book.git
+2. cd flask-book
 3. virtualenv -p python3 env
 4. source env/bin/activate
 5. pip install -r requirements.txt
